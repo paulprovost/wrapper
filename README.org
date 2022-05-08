@@ -1,0 +1,5 @@
+* wrapper
+Wrapper to execute a script when linked to from a bin directory in
+$PATH
+
+Handles shell scripts and python scripts, with and without virtual environments
