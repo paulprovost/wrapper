@@ -18,12 +18,14 @@ elif [ "$unamestr" = 'Darwin' ]; then
 fi
 
 # If the executable is a symlink, get the target and change directory to the enclosing one.
-REALFILE=$(${readlink} -f -- "${0}")
-REALDIR=${REALFILE%/*}
+REAL_FILENAME="${0##*/}"
+REAL_WRAPPER_FILE=$(${readlink} -f -- "${0}")
+REAL_WRAPPER_DIR=${REAL_WRAPPER_FILE%/*}
+REAL_DIR=${REAL_WRAPPER_DIR%/*}
 
-if [ ! -f ${REALDIR}/venv/bin/python ]; then
-    echo "No python virtual environment found in '${REALDIR}'"
+if [ ! -f ${REAL_DIR}/venv/bin/python ]; then
+    echo "No python virtual environment found in '${REAL_DIR}'"
     exit 1
 fi
 
-exec ${REALDIR}/venv/bin/python "${REALFILE}".py $*
+exec ${REAL_DIR}/venv/bin/python "${REAL_DIR}/${REAL_FILENAME}".py $*
