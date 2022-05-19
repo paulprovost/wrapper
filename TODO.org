@@ -1,0 +1,12 @@
+#+TITLE: TODO tracking for wrapper
+#+AUTHOR: Paul Provost
+#+EMAIL: paul@provost.one
+#+DESCRIPTION: 
+#+FILETAGS: @wrapper
+
+* TODO Add a parameter to specify the name of the executable to wrap
+When using through platypus, the link to wrapper is called "script",
+which obscures the real script name. So in the case of the App, we
+have to specify the name as a parameter and not rely on the 0th
+argument to have the right name.
+
