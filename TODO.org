@@ -4,7 +4,11 @@
 #+DESCRIPTION: 
 #+FILETAGS: @wrapper
 
-* TODO Add a parameter to specify the name of the executable to wrap
+* DONE Add a parameter to specify the name of the executable to wrap
+:LOGBOOK:
+- State "DONE"       from "STARTED"    [2022-05-20 Fri 07:15]
+- State "STARTED"    from "TODO"       [2022-05-20 Fri 07:15]
+:END:
 When using through platypus, the link to wrapper is called "script",
 which obscures the real script name. So in the case of the App, we
 have to specify the name as a parameter and not rely on the 0th
