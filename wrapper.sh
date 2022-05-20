@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# readlink is different on macOS...
+##,-----------------------------------
+##| readlink is different on macOS...
+##`-----------------------------------
 unamestr=`uname`
 if [ "$unamestr" = 'Linux' ]; then
     readlink='readlink'
@@ -17,8 +19,22 @@ elif [ "$unamestr" = 'Darwin' ]; then
     fi
 fi
 
-# If the executable is a symlink, get the target and change directory to the enclosing one.
-REAL_FILENAME="${0##*/}"
+##,--------------
+##| parse options
+##`--------------
+while getopts ":n:" opt; do
+  case $opt in
+    n) REAL_FILENAME="$OPTARG" ; shift 2 ;;
+  esac
+done
+
+##,----------------------------------------------------------
+##| If the executable is a symlink, get the target and change
+##| directory to the enclosing one.
+##`----------------------------------------------------------
+if [ -z "$REAL_FILENAME" ]; then
+    REAL_FILENAME="${0##*/}"
+fi
 REAL_WRAPPER_FILE=$(${readlink} -f -- "${0}")
 REAL_WRAPPER_DIR=${REAL_WRAPPER_FILE%/*}
 REAL_DIR=${REAL_WRAPPER_DIR%/*}
