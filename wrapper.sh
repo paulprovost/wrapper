@@ -40,7 +40,7 @@ REAL_WRAPPER_DIR=${REAL_WRAPPER_FILE%/*}
 REAL_DIR=${REAL_WRAPPER_DIR%/*}
 
 if [ ! -f ${REAL_DIR}/venv/bin/python ]; then
-    echo "No python virtual environment found in '${REAL_DIR}'"
+    exec "${REAL_DIR}/${REAL_FILENAME}".py $*
     exit 1
 fi
 
