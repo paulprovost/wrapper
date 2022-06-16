@@ -4,6 +4,12 @@
 #+DESCRIPTION: 
 #+FILETAGS: @wrapper
 
+* DONE Passing in parameters with =sh= is frustrating. Use python
+:LOGBOOK:
+- State "DONE"       from "STARTED"    [2022-06-16 Thu 13:06]
+- State "STARTED"    from "TODO"       [2022-06-16 Thu 11:57]
+:END:
+
 * DONE Add a parameter to specify the name of the executable to wrap
 :LOGBOOK:
 - State "DONE"       from "STARTED"    [2022-05-20 Fri 07:15]

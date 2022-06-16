@@ -1,5 +1,10 @@
 #!/bin/sh
 
+## DEPRECATED - Use the python script instead
+
+echo "DEPRECATED - Use the python script instead"
+exit 1
+
 ##,-----------------------------------
 ##| readlink is different on macOS...
 ##`-----------------------------------
@@ -22,9 +27,9 @@ fi
 ##,--------------
 ##| parse options
 ##`--------------
-while getopts ":n:" opt; do
+while getopts ":x:" opt; do
   case $opt in
-    n) REAL_FILENAME="$OPTARG" ; shift 2 ;;
+    x) REAL_FILENAME="$OPTARG" ; shift 2 ;;
   esac
 done
 
@@ -41,7 +46,7 @@ REAL_DIR=${REAL_WRAPPER_DIR%/*}
 
 if [ ! -f ${REAL_DIR}/venv/bin/python ]; then
     exec "${REAL_DIR}/${REAL_FILENAME}".py "$*"
-    exit 1
+    exit 0
 fi
 
 exec ${REAL_DIR}/venv/bin/python "${REAL_DIR}/${REAL_FILENAME}".py "$*"
