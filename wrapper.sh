@@ -44,4 +44,4 @@ if [ ! -f ${REAL_DIR}/venv/bin/python ]; then
     exit 1
 fi
 
-exec ${REAL_DIR}/venv/bin/python "${REAL_DIR}/${REAL_FILENAME}".py $*
+exec ${REAL_DIR}/venv/bin/python "${REAL_DIR}/${REAL_FILENAME}".py "$*"
