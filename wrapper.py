@@ -13,7 +13,7 @@ args, wrapped_args = parser.parse_known_args()
 real_filename = args.executable_name
 if not real_filename:
     real_filename = parser.prog
-
+    
 wrapper_file = sys.argv[0]
 if os.path.islink(wrapper_file):
     real_wrapper_file = os.path.realpath(wrapper_file)
@@ -33,5 +33,6 @@ command.extend(args.rest)
 
 try:
     subprocess.run(command)
-except:
+except Exception as e:
+    print("Failed to launch: " + str(e))
     sys.exit(-1)
