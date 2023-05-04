@@ -1,3 +1,5 @@
+#+OPTIONS: toc:nil
+
 Simple wrapper script to execute a script when linked to from a bin directory in
 $PATH
 

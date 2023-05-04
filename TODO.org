@@ -3,7 +3,7 @@
 #+EMAIL: paul@provost.one
 #+DESCRIPTION: 
 #+FILETAGS: @wrapper
- #+OPTIONS: toc:nil
+#+OPTIONS: toc:nil
  
 * DONE Passing in parameters with =sh= is frustrating. Use python
 :LOGBOOK:
