@@ -10,11 +10,12 @@ environments.
 I was tired of littering
 
 * Usage
-** Clone this repository as a submodule in the main directory of the script to wrap
-#+begin_src shell
-  cd <your script path>
-  git submodule add ssh://git@git.home.bouzou.org:222/paul/wrapper.git wrapper
-#+end_src
+- Clone this repository as a submodule in the main directory of the
+  script to wrap
+  #+begin_src shell
+    cd <your script path>
+    git submodule add ssh://git@git.home.bouzou.org:222/paul/wrapper.git wrapper
+  #+end_src
 
 * Platforms
 - Linux and macOS
