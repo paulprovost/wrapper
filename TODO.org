@@ -3,7 +3,8 @@
 #+EMAIL: paul@provost.one
 #+DESCRIPTION: 
 #+FILETAGS: @wrapper
-
+ #+OPTIONS: toc:nil
+ 
 * DONE Passing in parameters with =sh= is frustrating. Use python
 :LOGBOOK:
 - State "DONE"       from "STARTED"    [2022-06-16 Thu 13:06]
