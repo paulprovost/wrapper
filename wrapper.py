@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 
 import argparse
+import logging
 import os
 import subprocess
 import sys
 
+# logging.basicConfig(filename='wrapper_log',
+#                     filemode='a',
+#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+#                     datefmt='%H:%M:%S',
+#                     level=logging.INFO)
+
 parser = argparse.ArgumentParser()
-parser.add_argument('--executable-name', action='store', dest='executable_name')
+parser.add_argument('-n', '--executable-name', action='store', dest='executable_name')
 parser.add_argument('rest', nargs=argparse.REMAINDER)
 args, wrapped_args = parser.parse_known_args()
 
