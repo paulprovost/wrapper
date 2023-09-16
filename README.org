@@ -23,5 +23,5 @@ I was tired of littering my =~/local/bin= directory with tons of stuff. Hence th
 
 * Platforms
 - Linux and macOS
-- Special consideration for scripts called via applications generated
+- On macOS, special consideration for scripts called via applications generated
   using [[https://sveinbjorn.org/platypus][Platypus]].
