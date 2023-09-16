@@ -7,7 +7,7 @@ Handles shell scripts and python scripts, with and without virtual
 environments.
 
 * Rationale
-I was tired of littering
+I was tired of littering my =~/local/bin= directory with tons of stuff. Hence this wrapper, which lets you keep the particulars of a script out of sight and lets you run it.
 
 * Usage
 - Clone this repository as a submodule in the main directory of the
@@ -15,6 +15,10 @@ I was tired of littering
   #+begin_src shell
     cd <your script path>
     git submodule add ssh://git@git.home.bouzou.org:222/paul/wrapper.git wrapper
+  #+end_src
+- Link your executable to the wrapper executable
+  #+begin_src shell
+    ln -s <your script path>/wrapper/wrapper.py ~/local/bin/<your script name>
   #+end_src
 
 * Platforms
